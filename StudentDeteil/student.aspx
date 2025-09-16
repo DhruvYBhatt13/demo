@@ -9,6 +9,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <div style="font-size: xx-large;margin: 45px 393px;">Student Add Page   <asp:Button ID="btnstudentlist" runat="server" OnClick="btnstudentlist_Click" CssClass="btn bg-success" Text="studentlist"/></div>
         <div class="col-md-8 col-md-offset-2">  
              <div class="table">
             <asp:Label ID="lblName" runat="server" Text="Name"></asp:Label>
@@ -26,6 +27,12 @@
             <asp:Label ID="lblEnrollmentNumber" runat="server" Text="Enrollment Number"></asp:Label>
             <asp:TextBox ID="txtEnrollmentNumber" runat="server" style="margin-left:37px" Width="250px"></asp:TextBox>
             <br /><br />
+            <asp:Label ID="lblGender" runat="server" Text="Gender"></asp:Label>
+           <asp:RadioButtonList ID="rblGender" runat="server">
+               <asp:ListItem runat="server">mail</asp:ListItem>
+               <asp:ListItem runat="server">femail</asp:ListItem>
+           </asp:RadioButtonList>
+            <br /><br />
             <br />
             
             
@@ -35,6 +42,7 @@
                  <br />
             <br />
            </div> 
+            
         </div>
         
         

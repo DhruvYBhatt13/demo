@@ -35,6 +35,10 @@ namespace StudentDeteil
             con.Close();
             Response.Redirect("studentlist.aspx");
         }
-        
+
+        protected void btnstudentlist_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("studentlist.aspx");
+        }
     }
 }

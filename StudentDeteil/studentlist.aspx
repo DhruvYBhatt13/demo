@@ -10,10 +10,12 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <div class="col-md-8 col-md-offset-2">
-            <asp:GridView ID="Showdate" CssClass="table" OnRowUpdated="Showdate_RowUpdated" onrowdeleting="Showdate_RowDeleting" 
+           <div style="font-size: xx-large;margin: 45px 393px;">Student Add Page <asp:Button ID="btnstudentadd" runat="server" OnClick="btnstudentadd_Click" CssClass="btn bg-success" Text="studentadd"/></div>
+            <div class="col-md-10 col-md-offset-1">
+            <asp:GridView ID="Showdate" CssClass="table"  OnRowUpdated="Showdate_RowUpdated" onrowdeleting="Showdate_RowDeleting" 
                 onRowEditing="Showdate_RowEditing" DataKeyNames="id" AutoGenerateColumns="False" runat="server" >
                 <Columns>
+                    <asp:BoundField HeaderText="ID" DataField="id" />
                     <asp:BoundField HeaderText="Name" DataField="name" />
                     <asp:BoundField HeaderText="Address" DataField="address" />
                     <asp:BoundField HeaderText="Email" DataField="email" />
@@ -21,17 +23,18 @@
                     <asp:BoundField HeaderText="Enrollment Number" DataField="ernrollmentnumber" />
                     <asp:TemplateField HeaderText="Action">
                         <ItemTemplate>
-                            <asp:Button runat="server" CommandName="Edit" Text="Edit" />
+                            <asp:Button ID="btnEdit" runat="server" CommandName="Edit" Text="Edit" />
                             &nbsp; &nbsp;
                             <asp:Button ID="btnUpdate" runat="server" CommandName="Update" Text="Update" />
                             &nbsp; &nbsp;
                             <asp:Button ID="btnCancel" runat="server" CommandName="Cancel" Text="Cancel" />
                         </ItemTemplate>
                     </asp:TemplateField>
-                </Columns>
+                </Columns>                                              
             </asp:GridView>             
-        </div>
-        </div>
+        </div>                          
+        </div>                                         
     </form>
 </body>
 </html>
+                                                                                             
